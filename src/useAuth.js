@@ -8,7 +8,7 @@ export default function useAuth(code) {
 
   useEffect(() => {
     axios
-      .post("http://localhost:3002/login", {
+      .post("https://spotify-clone-backend-mas7.onrender.com/login", {
         code,
       })
       .then(res => {
@@ -27,7 +27,7 @@ export default function useAuth(code) {
     if (!refreshToken || !expiresIn) return
     const interval = setInterval(() => {
       axios
-        .post("http://localhost:3002/refresh", {
+        .post("https://spotify-clone-backend-mas7.onrender.com/refresh", {
           refreshToken,
         })
         .then(res => {

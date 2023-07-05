@@ -30,7 +30,7 @@ export default function Dashboard({code}) {
     if (!playingTrack) return
 
     axios
-      .get("http://localhost:3002/lyrics", {
+      .get("https://spotify-clone-backend-mas7.onrender.com/lyrics", {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,
